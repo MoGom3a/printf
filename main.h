@@ -18,9 +18,9 @@
 
 typedef struct format
 {
-	char *id;
-	int (*f)();
-} convert_match;
+	char *specifier;
+	int (*f)(va_list, params_t *);
+} specifier_t;
 
 int printf_pointer(va_list val);
 int printf_hex_aux(unsigned long int num);
