@@ -22,6 +22,13 @@ typedef struct format
 	int (*f)(va_list, params_t *);
 } specifier_t;
 
+/* handling task 0 ('the video way')
+int print_char(va_list ap, params_t *params);
+int print_string(va_list ap, params_t *params);
+int print_percent(va_list ap, params_t *params);
+int print_int(va_list ap, params_t *params);
+*/
+
 int printf_pointer(va_list val);
 int printf_hex_aux(unsigned long int num);
 int printf_HEX_aux(unsigned int num);
